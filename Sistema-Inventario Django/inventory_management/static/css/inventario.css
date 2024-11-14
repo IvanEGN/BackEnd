@@ -1,0 +1,115 @@
+/* Estilos generales para la página de inventario */
+.container-inventario {
+    padding: 20px;
+}
+
+.dropdown-menu {
+    display: none; /* Ocultar por defecto */
+    position: absolute; /* Posicionar relativo al elemento padre */
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Estilos para los elementos dentro del dropdown */
+.dropdown-item {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilos para las tarjetas de producto, proveedor y pedido */
+.card-inventario {
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header-inventario {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    padding: 10px 20px;
+}
+
+.card-body-inventario {
+    padding: 20px;
+}
+
+/* Estilos para la lista de elementos */
+.list-items {
+    list-style: none;
+    padding: 0;
+}
+
+.list-items li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+/* Estilos para botones */
+.btn-inventario {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-inventario:hover {
+    background-color: #0056b3;
+}
+
+.btn-danger-inventario {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger-inventario:hover {
+    background-color: #bd2130;
+}
+
+/* Estilos para la paginación */
+.pagination-inventario {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.pagination-link {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 1px solid #dee2e6;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.pagination-link:hover {
+    background-color: #e9ecef;
+}
+
+/* Estilos para formularios de búsqueda y filtros */
+.search-form {
+    margin-bottom: 20px;
+}
+
+.input-search {
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+/* Estilos para botones de acción en la lista de elementos */
+.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.action-buttons button {
+    margin-left: 10px;
+}

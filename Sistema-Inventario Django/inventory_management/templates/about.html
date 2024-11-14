@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Acerca de - Sistema de Inventario {% endblock %}
+{% block extra_css %}<link rel="stylesheet" href="{% static 'css/about.css' %}">{% endblock %}
+
+{% block content %}
+<div class="about-banner">
+    <h1>Acerca de Nosotros</h1>
+</div>
+
+<!-- Sección de contenido principal -->
+<section class="about-content">
+    <div class="container">
+        <h2>Nuestra Historia</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, nobis, ea, 
+            saepe illum nisi fugit quisquam eos adipisci totam sapiente doloribus odio. 
+            Facere ipsam sit ratione corrupti, autem inventore ex exercitationem atque assumenda fuga explicabo aut, 
+            fugit est voluptatem error maiores laborum sint, eligendi quisquam similique saepe amet.
+        </p>
+
+        <h2>Misión y Visión</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, nobis, ea, 
+            saepe illum nisi fugit quisquam eos adipisci totam sapiente doloribus odio. 
+            Facere ipsam sit ratione corrupti, autem inventore ex exercitationem atque assumenda fuga explicabo aut.
+        </p>
+
+        <h2>¿Por qué elegirnos?</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, nobis, ea, 
+            saepe illum nisi fugit quisquam eos adipisci totam sapiente doloribus odio.
+            saepe illum nisi fugit quisquam eos adipisci totam sapiente doloribus odio.
+        </p>
+
+        <!-- Aquí puedes agregar más secciones como 'Nuestro Equipo', 'Nuestros Valores', etc. -->
+    </div>
+</section>
+{% endblock %}

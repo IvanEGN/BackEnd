@@ -1,0 +1,57 @@
+.about-banner {
+    background-color: #ffc107; /* Cambia el color según tu esquema de diseño */
+    color: #070707;
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* Asegúrate de que el contenedor del formulario no esté pegado a los bordes superior e inferior */
+.login-container {
+    padding-top: 2rem; /* Esto agrega espacio en la parte superior */
+    padding-bottom: 2rem; /* Esto agrega espacio en la parte inferior */
+    min-height: calc(100vh - 120px); /* Ajusta el valor de 120px según la altura de tu navbar y footer */
+}
+
+/* Ajusta el card para que no esté pegado a los bordes izquierdo y derecho en pantallas pequeñas */
+.card {
+    margin: 0 auto; /* Esto centrará la tarjeta horizontalmente */
+    max-width: 500px; /* Ajusta este valor según lo que consideres adecuado para tu diseño */
+}
+
+/* Estilos adicionales para el formulario */
+.login-form {
+    padding: 2rem; /* Añade más relleno dentro del formulario */
+}
+/* Cambia el color del texto del enlace de registro */
+.login-form a {
+    color: #ffc107; /* Este es el color dorado que proporcionaste */
+    /* Otros estilos para el enlace, si es necesario */
+}
+/* Cambia el color del texto del enlace al pasar el ratón por encima */
+.login-form a:hover {
+    color: #e0a800; /* Un dorado un poco más oscuro para el efecto hover */
+    text-decoration: underline; /* Opcional, para subrayar al pasar el ratón */
+}
+
+/* Botón de Iniciar Sesión */
+.btn-primary {
+    background-color: #ffc107; /* Color amarillo */
+    border-color: #ffc107; /* Color amarillo para el borde */
+}
+
+/* Cambia el color del botón al pasar el ratón por encima */
+.btn-primary:hover {
+    background-color: #e0a800; /* Un tono más oscuro de amarillo para el efecto hover */
+    border-color: #e0a800; /* Asegúrate de que el color del borde también cambie para el efecto hover */
+}
+
+/* Enlace de registro */
+.login-form a {
+    color: #ffc107; /* Color amarillo para el enlace */
+}
+
+/* Cambia el color del enlace al pasar el ratón por encima */
+.login-form a:hover {
+    color: #e0a800; /* Un tono más oscuro de amarillo para el efecto hover */
+}
+

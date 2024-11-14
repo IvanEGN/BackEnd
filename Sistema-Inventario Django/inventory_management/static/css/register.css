@@ -1,0 +1,30 @@
+/* Estilos para la página de registro */
+.card {
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+/* Utiliza la misma clase que el botón de inicio de sesión para el botón de registro */
+.custom-btn-primary {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.custom-btn-primary:hover {
+    background-color: #e0a800;
+    border-color: #e0a800;
+}
+
+/* Estilos para el enlace de iniciar sesión */
+.text-link {
+    color: #ffc107;
+}
+
+.text-link:hover {
+    color: #e0a800;
+    text-decoration: underline;
+}

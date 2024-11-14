@@ -1,0 +1,14 @@
+.about-banner {
+    background-color: #ffc107; /* Cambia el color según tu esquema de diseño */
+    color: #070707;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.about-content {
+    padding: 40px 0;
+}
+
+.about-content h2 {
+    margin-top: 20px;
+}

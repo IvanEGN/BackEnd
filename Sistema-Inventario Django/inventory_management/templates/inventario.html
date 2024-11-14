@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Inventario {% endblock %}
+{% block extra_css %}<link rel="stylesheet" href="{% static 'css/inventario.css' %}">{% endblock %}
+
+{% block navbar %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Sistema de Inventario</a>
+            <!-- ... -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'add_product' %}">Crear Producto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'add_supplier' %}">Crear Proveedor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'add_order' %}">Crear Orden</a>
+                    </li>
+                    <li class="nav-item dropdown api-nav">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+                            API
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="{% url 'product-list' %}">Productos API</a>
+                            <a class="dropdown-item" href="{% url 'supplier-list' %}">Proveedores API</a>
+                            <a class="dropdown-item" href="{% url 'order-list' %}">Pedidos API</a>
+                            <a class="dropdown-item" href="{% url 'swagger' %}">API Documentation</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'logout' %}">Cerrar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+{% endblock navbar %}
+
+<li class="nav-item " style="{% if not 'api' in show_buttons %}display:none;{% endif %}">
+    <a class="nav-link" href="#">API</a>
+</li>
+{% block content %}
+<div class="container-inventario">
+    <!-- Sección de Productos -->
+    <div class="card-inventario">
+        <div class="card-header-inventario">Productos</div>
+        <div class="card-body-inventario">
+            <ul>
+                {% for product in products %}
+                <li>
+                    {{ product.name }} - {{ product.stock }} en stock - ${{ product.price }}
+                    <form method="post" action="{% url 'delete_product' product.id %}" style="display: inline;">
+                        {% csrf_token %}
+                        <input type="submit" value="Eliminar" class="btn btn-danger"/>
+                    </form>
+                </li>
+                {% empty %}
+                <li>No hay productos.</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <!-- Sección de Proveedores -->
+    <div class="card-inventario">
+        <div class="card-header-inventario">
+            Proveedores
+            <a href="{% url 'add_supplier' %}" class="btn btn-primary">Añadir Proveedor</a>
+        </div>
+        <div class="card-body-inventario">
+            <ul>
+                {% for supplier in suppliers %}
+                <li>
+                    {{ supplier.name }} - Contacto: {{ supplier.contact_name }}
+                    <form method="post" action="{% url 'delete_supplier' supplier.id %}" style="display: inline;">
+                        {% csrf_token %}
+                        <input type="submit" value="Eliminar" class="btn btn-danger"/>
+                    </form>
+                </li>
+                {% empty %}
+                <li>No hay proveedores.</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <!-- Sección de Pedidos -->
+    <div class="card-inventario">
+        <div class="card-header-inventario">
+            Pedidos Pendientes
+            <a href="{% url 'add_order' %}" class="btn btn-primary">Añadir Pedido</a>
+        </div>
+        <div class="card-body-inventario">
+            <ul>
+                {% for order in orders %}
+                <li>
+                    {{ order.quantity }} de {{ order.product.name }} - Estado: {{ order.get_status_display }}
+                    <form method="post" action="{% url 'delete_order' order.id %}" style="display: inline;">
+                        {% csrf_token %}
+                        <input type="submit" value="Eliminar" class="btn btn-danger"/>
+                    </form>
+                </li>
+                {% empty %}
+                <li>No hay pedidos pendientes.</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

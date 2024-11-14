@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.banner {
+    background-color: #ffc107; /* Amarillo */
+    color: #070707;
+    padding: 30px 0;
+}
+.full-width-image img {
+    display: block; /* Elimina cualquier margen extra */
+    width: 100%; /* Asegura que la imagen se extienda a todo el ancho */
+    height: 285px; /* Mantiene la proporción de la imagen */
+}
+.features {
+    padding: 20px 0;
+}
+.feature-icon {
+    font-size: 48px;
+    color: #ffc107; /* Amarillo */
+}
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}

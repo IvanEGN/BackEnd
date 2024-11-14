@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %} Sistema de Inventario {% endblock %}
+
+{% block content%}
+<!-- Banner Section -->
+<div class="banner text-center">
+    <h1>Bienvenido a tu Sistema de Inventario</h1>
+    <p>Gestiona tu inventario de forma eficiente y sencilla.</p>
+</div>
+
+<!-- Imagen a pantalla completa -->
+<div class="full-width-image">
+    <img src="{% static 'img/imagen_fondo.jpg' %}" alt="">
+</div>
+
+<!-- Features Section -->
+<div class="container features">
+    <div class="row">
+        <div class="col-md-4 text-center">
+            <div class="feature-icon">
+                <i class="bi bi-box-seam"></i>
+            </div>
+            <h3>Inventario</h3>
+            <p>Controla y gestiona tu stock en tiempo real.</p>
+        </div>
+        <div class="col-md-4 text-center">
+            <div class="feature-icon">
+                <i class="bi bi-graph-up"></i>
+            </div>
+            <h3>Reportes</h3>
+            <p>Visualiza reportes detallados para tomar decisiones informadas.</p>
+        </div>
+        <div class="col-md-4 text-center">
+            <div class="feature-icon">
+                <i class="bi bi-people"></i>
+            </div>
+            <h3>Usuarios</h3>
+            <p>Gestiona los permisos y roles de los usuarios del sistema.</p>
+        </div>
+    </div>
+</div>
+{%endblock%}
+
